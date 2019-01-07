@@ -1,0 +1,7 @@
+---
+- name: Lets make some noise
+  hosts: target
+  remote_user: target_user
+  tasks:
+    - name: The only way to stop this is aborting the program for now
+      shell: cat /dev/urandom | padsp tee /dev/audio > /dev/null
